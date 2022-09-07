@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checker</title>
+  </head>
+  <style>
+    body {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: 100%;
+      font-family: "Courier New", Courier, monospace;
+      background-repeat: no-repeat;
+    }
+    .bola {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: black;
+      animation: mexe 2.5s infinite;
+      margin-left: 10px;
+      margin-right: 4px;
+    }
+    .bola2 {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: black;
+      animation: mexe2 2.3s infinite;
+      margin-right: 4px;
+    }
+    .bola3 {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: black;
+      animation: mexe3 2.2s infinite;
+    }
+    #h1 {
+      display: flex;
+    }
+
+    #bolas {
+      margin-top: 15px;
+      display: none;
+    }
+
+    @keyframes mexe {
+      0% {
+        transform: translateY(-4px);
+      }
+      50% {
+        transform: translateY(4px);
+      }
+      100% {
+        transform: translateY(-4px);
+      }
+    }
+
+    @keyframes mexe2 {
+      0% {
+        transform: translateY(4px);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+      100% {
+        transform: translateY(4px);
+      }
+    }
+
+    @keyframes mexe3 {
+      0% {
+        transform: translateY(-4px);
+      }
+      50% {
+        transform: translateY(4px);
+      }
+      100% {
+        transform: translateY(-4px);
+      }
+    }
+  </style>
+  <body>
+    <h1 id="h1"></h1>
+    <div id="bolas" class="bola"></div>
+    <div id="bolas" class="bola2"></div>
+    <div id="bolas" class="bola3"></div>
+    <script type-="text/javastript">
+      let h1 = document.getElementById("h1");
+      let bola = document.querySelector(".bola");
+      let bola2 = document.querySelector(".bola2");
+      let bola3 = document.querySelector(".bola3");
+      let judi = document.getElementsByTagName("body");
+      while ((nome = window.prompt("Quem é?"))) {
+        if (nome == "leo") {
+          h1.innerHTML = "bem vindo " + nome;
+          bola.style.display = "block";
+          bola2.style.display = "block";
+          bola3.style.display = "block";
+          break;
+        }
+        if (nome == "Leo") {
+          h1.innerText = "bem vindo " + nome;
+          bola.style.display = "block";
+          bola2.style.display = "block";
+          bola3.style.display = "block";
+          break;
+        }
+        if (nome == "leonardo") {
+          h1.innerText = "bem vindo " + nome;
+          bola.style.display = "block";
+          bola2.style.display = "block";
+          bola3.style.display = "block";
+          break;
+        }
+        if (nome == "Leonardo") {
+          h1.innerText = "bem vindo " + nome;
+          bola.style.display = "block";
+          bola2.style.display = "block";
+          bola3.style.display = "block";
+          break;
+        } else {
+          alert("erou");
+        }
+      }
+    </script>
+  </body>
+</html>
